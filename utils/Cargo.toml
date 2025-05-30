@@ -9,9 +9,9 @@ readme = "README.md"
 edition = "2021"
 license = "Apache-2.0"
 
-[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
-tikv-jemalloc-ctl = { workspace = true }
-tikv-jemallocator = { workspace = true }
+#[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+#tikv-jemalloc-ctl = { workspace = true }
+#tikv-jemallocator = { workspace = true }
 
 [dependencies]
 ark-ec.workspace = true

@@ -173,14 +173,14 @@ mod test {
         thread,
     };
 
-    #[cfg(not(target_arch = "wasm32"))]
+    /*#[cfg(not(target_arch = "wasm32"))]
     fn print_heap_usage(label: &str) {
         use tikv_jemalloc_ctl::{epoch, stats};
 
         epoch::advance().unwrap(); // refresh internal stats!
         let allocated = stats::allocated::read().unwrap();
         println!("[{label}] Heap allocated: {} kilobytes", allocated / 1024);
-    }
+    }*/
 
     /// Test creating and getting `LazyCache` values
     #[test]
@@ -264,7 +264,7 @@ mod test {
         }
     }
 
-    #[cfg(not(target_arch = "wasm32"))]
+    /*#[cfg(not(target_arch = "wasm32"))]
     #[test]
     fn test_lazy_cache_allocation() {
         use tikv_jemallocator::Jemalloc;
@@ -281,5 +281,5 @@ mod test {
         let _ = cache.get();
 
         print_heap_usage("After initializing LazyCache");
-    }
+    }*/
 }

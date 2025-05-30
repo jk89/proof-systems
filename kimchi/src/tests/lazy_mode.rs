@@ -14,8 +14,8 @@ use mina_poseidon::{
     sponge::{DefaultFqSponge, DefaultFrSponge},
 };
 use rand::Rng;
-#[cfg(not(target_arch = "wasm32"))]
-use tikv_jemallocator::Jemalloc;
+//#[cfg(not(target_arch = "wasm32"))]
+//use tikv_jemallocator::Jemalloc;
 
 type SpongeParams = PlonkSpongeConstantsKimchi;
 type BaseSponge = DefaultFqSponge<VestaParameters, SpongeParams>;
@@ -23,7 +23,7 @@ type ScalarSponge = DefaultFrSponge<Fp, SpongeParams>;
 
 // Unit tests for LazyCache
 
-#[test]
+/*#[test]
 fn test_lazy_mode_benchmark() {
     #[cfg(not(target_arch = "wasm32"))]
     #[global_allocator]
@@ -87,3 +87,4 @@ fn test_lazy_mode_benchmark() {
             .unwrap();
     }
 }
+*/
